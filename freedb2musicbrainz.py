@@ -31,6 +31,8 @@ import musicbrainzngs
 
 __version__ = '0.0.0'
 
+MUSICBRAINZ_HOST = 'musicbrainz.org:443'
+
 
 def cddb_lookup_string(disc):
     """Generate a `cddb query` compatible string.
@@ -61,7 +63,7 @@ def cddb_lookup_string(disc):
 def main():
     result = None
     disc = discid.read(features=['mcn'])
-    musicbrainzngs.set_hostname('musicbrainz.org:443')
+    musicbrainzngs.set_hostname(MUSICBRAINZ_HOST)
     musicbrainzngs.set_useragent('freedb2musicbrainz.py', __version__,
                                  contact='Freso')
 
