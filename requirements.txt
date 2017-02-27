@@ -1,0 +1,3 @@
+discid
+musicbrainzngs
+git+https://github.com/cbxbiker61/python-cddb.git
