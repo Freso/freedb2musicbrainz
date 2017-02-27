@@ -31,7 +31,9 @@ import musicbrainzngs
 
 __version__ = '0.0.0'
 
-MUSICBRAINZ_HOST = 'musicbrainz.org:443'
+# TODO: Switch to HTTPS (port 443) once upstream is fixed:
+# https://github.com/alastair/python-musicbrainzngs/issues/197
+MUSICBRAINZ_HOST = 'musicbrainz.org'
 
 
 def cddb_lookup_string(disc):
