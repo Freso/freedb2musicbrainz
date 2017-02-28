@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # vim:fileencoding=utf-8
 #
 # FreeDB2MusicBrainz.py: Submit data from FreeDB to MusicBrainz
