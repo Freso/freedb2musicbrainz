@@ -64,10 +64,15 @@ def cddb_lookup_string(disc):
 
 def main():
     result = None
-    disc = discid.read(features=['mcn'])
     musicbrainzngs.set_hostname(MUSICBRAINZ_HOST)
     musicbrainzngs.set_useragent('freedb2musicbrainz.py', __version__,
                                  contact='Freso')
+
+    try:
+        disc = discid.read(features=['mcn'])
+    except discid.disc.DiscError as err:
+        print("Error reading disc: %s" % (err))
+        exit(1)
 
     try:
         result = musicbrainzngs.get_releases_by_discid(disc.id)
